@@ -1,0 +1,503 @@
+/* ================================================================
+   FLY BAZAAR — responsive.css  (COMPLETE FINAL VERSION)
+================================================================ */
+
+/* ================================================================
+   1. TABLET (768px – 1199px)
+================================================================ */
+@media (max-width: 1199px) {
+  .header-left {
+    width: auto;
+  }
+  .header-right {
+    width: auto;
+    gap: 14px;
+  }
+  .search-box {
+    margin-left: 10px;
+    gap: 10px;
+    padding: 7px 12px;
+  }
+  .search-box input {
+    max-width: 200px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .site-title {
+    font-size: 24px;
+  }
+  .products {
+    padding: 40px 30px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .hero {
+    padding: 40px 30px;
+  }
+  .hero img {
+    width: 280px;
+    height: 320px;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .full-banner {
+    padding: 10px 30px;
+  }
+  .banner-content h1 {
+    font-size: 36px;
+  }
+  .men-list,
+  .women-list,
+  .kids-list {
+    gap: 20px;
+  }
+}
+
+/* ================================================================
+   2. MOBILE (max-width: 767px) — HAMBURGER MENU
+================================================================ */
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  /* padding-top is intentionally NOT set here — js/main.js → syncPadding()
+     calculates and applies it dynamically based on the real combined
+     height of the header + any banner-style elements stacked below it
+     (announcement bar, trends section, category heading, etc.) */
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    width: 100%;
+    margin: 0;
+    gap: 0;
+  }
+
+  .logo-area {
+    gap: 8px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .logo {
+    width: 38px !important;
+  }
+  .brand {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-title {
+    font-size: 16px !important;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tagline {
+    font-size: 9px !important;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+    margin-left: 0;
+    animation: none;
+  }
+
+  .hamburger {
+    display: flex !important;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  .nav {
+    display: none !important;
+    width: 100%;
+    background: #1f2937;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 0 10px;
+    margin-right: 0 !important;
+    justify-content: flex-start;
+  }
+  .nav.open {
+    display: flex !important;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: none;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links > li > a {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 100% !important;
+    display: none !important;
+    flex-direction: column !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .dropdown.open .dropdown-menu {
+    display: flex !important;
+  }
+  .dropdown-menu li {
+    padding: 0;
+  }
+  .dropdown-menu li a {
+    display: block !important;
+    padding: 10px 32px !important;
+    font-size: 13px !important;
+    color: #111827 !important;
+  }
+
+  .header-right {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 7px 14px;
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 10px !important;
+  }
+
+  .search-box {
+    flex: 1;
+    margin-left: 0;
+    padding: 6px 10px;
+    gap: 8px;
+    border-radius: 20px;
+    min-width: 0;
+  }
+  .search-box input {
+    width: 100%;
+    max-width: none;
+    font-size: 13px;
+    min-width: 0;
+  }
+
+  .user-icons ul {
+    gap: 14px !important;
+    font-size: 11px;
+  }
+  .user-icons ul li i {
+    font-size: 17px !important;
+  }
+
+  /* body padding-top is set dynamically by js/main.js → syncPadding(),
+     which now accounts for the header PLUS any stacked elements
+     (announcement bar, trends, category banner) on every page type */
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 24px 16px;
+    text-align: center;
+    gap: 20px;
+  }
+  .slide {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  .hero-text h2 {
+    font-size: 16px;
+  }
+  .hero img {
+    width: 100%;
+    max-width: 300px;
+    height: 280px;
+  }
+
+  .hero img:hover {
+    transform: none;
+  }
+  .product-card:hover {
+    transform: none;
+  }
+  .info-box:hover {
+    transform: none;
+  }
+
+  /* PRODUCTS */
+  .products {
+    padding: 24px 12px;
+  }
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .product-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+  .product-card img {
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background: #f9fafb;
+    margin-bottom: 10px;
+  }
+  .wishlist {
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    right: 8px;
+  }
+  .wishlist i {
+    font-size: 13px;
+  }
+  .product-btns {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .product-btns .btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 6px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .announcement-track span {
+    font-size: 13px;
+  }
+  .announcement-track1 span {
+    font-size: 13px;
+  }
+
+  /* FULL BANNER */
+  .full-banner {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 16px;
+    text-align: center;
+    gap: 16px;
+  }
+  .banner-content {
+    margin-left: 0;
+  }
+  .banner-content h1 {
+    font-size: 28px;
+    animation: none;
+  }
+  .banner-content h2 {
+    font-size: 16px;
+  }
+  .full-banner img {
+    height: 160px;
+    width: auto;
+  }
+
+  /* CATEGORY LISTS */
+  .men-list,
+  .women-list,
+  .kids-list {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .men-list li,
+  .women-list li,
+  .kids-list li {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .men-category h2,
+  .women-category h2,
+  .kids-category h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 20px;
+    text-align: center;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+  .footer-box {
+    text-align: center !important;
+  }
+  .footer-box:nth-child(2) p {
+    justify-content: center;
+    width: auto;
+  }
+  .footer-box:nth-child(3) .social-icons {
+    justify-content: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    font-size: 12px;
+    padding-top: 12px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 16px;
+    gap: 20px;
+  }
+  .contact-hero h1 {
+    font-size: 28px;
+  }
+  .contact-form-box form {
+    padding: 24px 16px;
+  }
+
+  /* ABOUT PAGE */
+  section {
+    padding: 20px 16px !important;
+  }
+  .about-hero {
+    padding: 30px 16px !important;
+  }
+  .hero-content h1 {
+    font-size: 32px !important;
+  }
+  .about-main {
+    flex-direction: column !important;
+  }
+}
+
+/* ================================================================
+   3. SMALL MOBILE (max-width: 480px)
+================================================================ */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+  }
+  .tagline {
+    display: none !important;
+  }
+  .logo {
+    width: 32px !important;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+  .hero img {
+    height: 220px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .product-card {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .product-card img {
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    background: #f9fafb;
+  }
+  .product-card h3 {
+    font-size: 13px;
+    min-height: 36px;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+
+  .banner-content h1 {
+    font-size: 22px;
+  }
+  .full-banner img {
+    height: 120px;
+  }
+
+  .contact-hero h1 {
+    font-size: 22px;
+  }
+  .hero-content h1 {
+    font-size: 26px !important;
+  }
+
+  .men-list li,
+  .women-list li,
+  .kids-list li {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
+
+/* ================================================================
+   4. LANDSCAPE ORIENTATION
+================================================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding: 16px;
+    gap: 16px;
+  }
+  .hero-text h1 {
+    font-size: 22px;
+  }
+  .hero img {
+    height: 180px;
+    width: auto;
+  }
+}

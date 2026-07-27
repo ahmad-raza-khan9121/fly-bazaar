@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly Bazaar | Online Shopping for Fashion, Electronics, Home & More</title>
+
+  <meta name="description"
+    content="Shop the best deals on fashion, electronics, home essentials, kids products and more at Fly Bazaar — India's trusted online store with secure checkout, cart & wishlist.">
+  <meta name="keywords"
+    content="Fly Bazaar, online shopping India, fashion, electronics, home essentials, kids products, best deals, online store">
+  <meta name="author" content="Fly Bazaar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://flybazaar.example.com/index.html">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fly Bazaar | Online Shopping for Fashion, Electronics, Home & More">
+  <meta property="og:description"
+    content="Shop the best deals on fashion, electronics, home essentials, kids products and more at Fly Bazaar — India's trusted online store with secure checkout, cart & wishlist.">
+  <meta property="og:image" content="assets/favicon/favicon-512.png">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fly Bazaar | Online Shopping for Fashion, Electronics, Home & More">
+  <meta name="twitter:description"
+    content="Shop the best deals on fashion, electronics, home essentials, kids products and more at Fly Bazaar — India's trusted online store with secure checkout, cart & wishlist.">
+  <meta name="twitter:image" content="assets/favicon/favicon-512.png">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.json">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "Fly Bazaar",
+    "url": "https://flybazaar.example.com/",
+    "logo": "assets/favicon/favicon-512.png",
+    "image": "assets/favicon/favicon-512.png",
+    "description": "Fly Bazaar is an online store offering fashion, electronics, home essentials, kids products and more at great prices.",
+    "telephone": "+91-9022187677",
+    "email": "ahmadraza.khan9121@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Parbhani",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹"
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header Section -->
+  <header class="header">
+    <!-- Header Left -->
+    <div class="header-left">
+      <div class="logo-area">
+        <img src="assets/fly-bazaar-logo.png" class="logo" alt="logo" />
+        <div class="brand">
+          <h1 class="site-title">FLY BAZAAR</h1>
+          <span class="tagline">Man Chaahi Deals</span>
+        </div>
+      </div>
+
+      <!-- Navigation Section -->
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li class="dropdown">
+            <a href="#">Categories<i class="fa fa-chevron-down"></i></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="pages/men/men.html">Men's</a></li>
+              <li><a href="pages/women/women.html">Women's</a></li>
+              <li><a href="pages/kids/kids.html">Kids & Toys</a></li>
+              <li><a href="pages/beauty/beauty.html">Beauty & Fashion</a></li>
+              <li>
+                <a href="pages/electronics/electronics.html">Electronics & Gadgets</a>
+              </li>
+              <li><a href="pages/sports/sports.html">Sports</a></li>
+              <li><a href="pages/education/education.html">Education</a></li>
+              <li><a href="pages/furniture/furniture.html">Furniture</a></li>
+              <li><a href="pages/foods/foods.html">Foods & Drinks</a></li>
+              <li><a href="pages/trends/trend.html">Trends</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header Right -->
+    <div class="header-right">
+      <!-- SEARCH -->
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <i class="fa fa-search"></i>
+      </div>
+
+      <!-- USER ICONS -->
+      <div class="user-icons">
+        <ul>
+          <li id="userIconBtn" style="cursor:pointer"><i class="fa-regular fa-user"></i>user</li>
+          <li onclick="window.location='wishlist.html'" style="position:relative;cursor:pointer">
+            <i class="fa-regular fa-heart"></i>wishlist
+            <span class="cart-badge" id="wishBadge" style="display:none">0</span>
+          </li>
+          <li onclick="window.location='cart.html'" style="position:relative;cursor:pointer">
+            <i class="fa-solid fa-cart-shopping"></i>cart
+            <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div id="main-content" class="announcement-wrapper">
+    <div class="announcement-bar">
+      <div class="announcement-track">
+        <span><i class="fa-solid fa-bolt"></i> Dhamaka Special Offers</span>
+        <span><i class="fa-solid fa-bolt"></i> Flat 40% OFF on All Products</span>
+        <span><i class="fa-solid fa-bolt"></i> Free Delivery on Orders Above
+          ₹999</span>
+        <span><i class="fa-solid fa-bolt"></i> Limited Time Deals Hurry Up!</span>
+        <span><i class="fa-solid fa-bolt"></i> Branded & High Quality
+          Products</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="slide active">
+        <div class="hero-text">
+          <h2>Best Deals</h2>
+          <h1>Dumbells</h1>
+          <a href="#best-products" class="btn">Shop Now</a>
+        </div>
+        <a href="#best-products">
+          <img src="assets/images/home/Dumbells.jpg" alt="Dumbells" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+        </a>
+      </div>
+
+      <div class="slide">
+        <div class="hero-text">
+          <h2>Latest Collection</h2>
+          <h1>Women's Fancy Bag</h1>
+          <a href="#best-products" class="btn">Get Now</a>
+        </div>
+        <a href="#best-products">
+          <img src="assets/images/home/Women's Fancy Bag.jpg" alt="Women's Fancy Bag" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+        </a>
+      </div>
+
+      <div class="slide">
+        <div class="hero-text">
+          <h2>Branded & New</h2>
+          <h1>Kids Cycle Purple</h1>
+          <a href="#best-products" class="btn">Explore</a>
+        </div>
+        <a href="#best-products">
+          <img src="assets/images/home/Kids Cycle Purple.jpg" alt="Kids Cycle Purple" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+        </a>
+      </div>
+
+      <div class="slide">
+        <div class="hero-text">
+          <h2>Modern & Fancy</h2>
+          <h1>LED Color Light Shoes</h1>
+          <a href="#best-products" class="btn">Buy Now</a>
+        </div>
+        <a href="#best-products">
+          <img src="assets/images/home/LED Color Light Shoes.jpg" alt="LED Color Light Shoes" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="best-products">
+      <h2 class="section-title">Best Seller Products</h2>
+
+      <div class="product-grid">
+        <div class="product-card" id="product-sling-bag-for-travels">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Sling Bag For Travels.jpg" alt="Sling Bag For Travels" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Sling Bag For Travels</h3>
+          <p class="price">₹2499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-boxing-gloves">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Boxing Gloves.jpg" alt="Boxing Gloves" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Boxing Gloves</h3>
+          <p class="price">₹1999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-dumbells">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Dumbells.jpg" alt="Dumbells" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Dumbells</h3>
+          <p class="price">₹999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-bluetooth-headphones">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Bluetooth Headphones.jpg" alt="Bluetooth Headphones" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Bluetooth Headphones</h3>
+          <p class="price">₹1299</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-kids-cycle-purple">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Kids Cycle Purple.jpg" alt="Kids Cycle Purple" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Kids Cycle Purple</h3>
+          <p class="price">₹2499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-kids-creative-sofa-2">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Kids Creative Sofa.jpg" alt="Kids Creative Sofa" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Kids Creative Sofa</h3>
+          <p class="price">₹3499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-kids-stylish-chappal-2">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Kids Stylish Chappal.jpg" alt="Kids Stylish Chappal" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Kids Stylish Chappal</h3>
+          <p class="price">₹699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-shoes-for-girls">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Shoes For Girls.jpg" alt="Shoes For Girls" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Shoes For Girls</h3>
+          <p class="price">₹699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-women-s-fancy-bag">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Women's Fancy Bag.jpg" alt="Women's Fancy Bag" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Women's Fancy Bag</h3>
+          <p class="price">₹1299</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-women-s-hand-wallet">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Women's Hand Wallet.jpg" alt="Women's Hand Wallet" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Women's Hand Wallet</h3>
+          <p class="price">₹399</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-women-s-fashion-glasses">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Women's Fashion Glasses.jpg" alt="Women's Fashion Glasses" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Women's Fashion Glasses</h3>
+          <p class="price">₹1199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-women-s-mobile-cover">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Women's Mobile Cover.jpg" alt="Women's Mobile Cover" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Women's Mobile Cover</h3>
+          <p class="price">₹249</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-bride-hill-sandal">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Bride Hill Sandal.jpg" alt="Bride Hill Sandal" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Bride Hill Sandal</h3>
+          <p class="price">₹1199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-bridal-chuda">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Bridal Chuda.jpg" alt="Bridal Chuda" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Bridal Chuda</h3>
+          <p class="price">₹699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-casual-shoes">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Casual Shoes.jpg" alt="Men's Casual Shoes" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Casual Shoes</h3>
+          <p class="price">₹1199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-jacket-pant">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Jacket & Pant.jpg" alt="Men's Jacket & Pant" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Jacket & Pant</h3>
+          <p class="price">₹1499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-exclusive-men-s-printed-shirt">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Exclusive Men's Printed Shirt.jpg" alt="Exclusive Men's Printed Shirt"
+            loading="lazy" onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Exclusive Men's Printed Shirt</h3>
+          <p class="price">₹699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-led-color-light-shoes">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/LED Color Light Shoes.jpg" alt="LED Color Light Shoes" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>LED Color Light Shoes</h3>
+          <p class="price">₹999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-aviators">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Aviators.jpg" alt="Men's Aviators" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Aviators</h3>
+          <p class="price">₹599</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-stylish-wallets">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Stylish Wallets.jpg" alt="Men's Stylish Wallets" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Stylish Wallets</h3>
+          <p class="price">₹199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-garnier-men-face-wash">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Garnier Men Face Wash.jpg" alt="Garnier Men Face Wash" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Garnier Men Face Wash</h3>
+          <p class="price">₹199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-7-piece-skincare-set">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/7 Piece Skincare Set.jpg" alt="7 Piece Skincare Set" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>7 Piece Skincare Set</h3>
+          <p class="price">₹1199</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-perfume-fragrance">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Perfume & Fragrance.jpg" alt="Men's Perfume & Fragrance" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Perfume & Fragrance</h3>
+          <p class="price">₹499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-hair-care-kit-2">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Hair Care Kit.jpg" alt="Hair Care Kit" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Hair Care Kit</h3>
+          <p class="price">₹2699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-dining-table">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Dining Table.jpg" alt="Dining Table" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Dining Table</h3>
+          <p class="price">₹24999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-baby-cribs">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Baby Cribs.jpg" alt="Baby Cribs" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Baby Cribs</h3>
+          <p class="price">₹1999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-portable-mini-sewing-machine-2">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Portable Mini Sewing Machine.jpg" alt="Portable Mini Sewing Machine"
+            loading="lazy" onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Portable Mini Sewing Machine</h3>
+          <p class="price">₹1499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-samsung-refrigerators">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Samsung Refrigerators.jpg" alt="Samsung Refrigerators" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Samsung Refrigerators</h3>
+          <p class="price">₹27999</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-mango-frooti-bottle">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Mango Frooti Bottle.jpg" alt="Mango Frooti Bottle" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Mango Frooti Bottle</h3>
+          <p class="price">₹49</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-beauty-dress">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Beauty Dress.jpg" alt="Beauty Dress" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Beauty Dress</h3>
+          <p class="price">₹1499</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-women-s-sport-shoes">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Women's Sport Shoes.jpg" alt="Women's Sport Shoes" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Women's Sport Shoes</h3>
+          <p class="price">₹699</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="product-men-s-brooches">
+          <!-- Wishlist Icon -->
+          <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <img src="assets/images/home/Men's Brooch.jpg" alt="Men's Brooch" loading="lazy"
+            onerror="this.onerror=null;this.src='assets/fly-bazaar-logo.png';" />
+          <h3>Men's Brooches</h3>
+          <p class="price">₹179</p>
+          <div class="product-btns">
+            <button class="btn small">Add to Cart</button>
+            <button class="btn small outline">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- BRAND -->
+      <div class="footer-box">
+        <h2 class="footer-logo">FLY BAZAAR</h2>
+        <p class="footer-desc">
+          Premium shopping platform delivering trusted products, fast delivery
+          and best deals across India.
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+
+        <!-- Location -->
+        <p>
+          <a href="https://www.google.com/maps/place/Parbhani+Junction/@19.2576875,76.7711219,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd019cc1d72b759:0x4d6eaa4ac80824c9!8m2!3d19.2576875!4d76.7736968!16s%2Fg%2F1td6l38v?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank" rel="noopener noreferrer" aria-label="Ahmad Raza Khan Location">
+            <i class="fa fa-location-dot"></i>
+            Parbhani, Maharashtra, India
+          </a>
+        </p>
+
+        <!-- Phone -->
+        <p>
+          <a href="tel:+919022187677" target="_blank" rel="noopener noreferrer" aria-label="Call Ahmad Raza Khan">
+            <i class="fa fa-phone"></i>
+            +91 9022187677
+          </a>
+        </p>
+
+        <!-- Email -->
+        <p>
+          <a href="mailto:ahmadraza.khan9121@gmail.com" target="_blank" rel="noopener noreferrer"
+            aria-label="Mai to Ahmad Raza Khan">
+            <i class="fa fa-envelope"></i>
+            ahmadraza.khan9121@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-box">
+        <h3>Follow On</h3>
+        <div class="social-icons">
+          <a href="https://wa.me/919022187677" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://t.me/ahmad_raza_khan9121" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+
+          <a href="https://github.com/ahmad-raza-khan9121" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ahmad-raza-khan9121" target="_blank" rel="noopener noreferrer"
+            aria-label="Linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 Fly Bazaar | Designed & Developed by Ahmad Raza Khan | Web
+        Designer & Developer | All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <script>window.SITE_ROOT = "";</script>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
