@@ -3,4 +3,4 @@ Allow: /
 Disallow: /cart.html
 Disallow: /wishlist.html
 
-Sitemap: https://flybazaar.example.com/sitemap.xml
+Sitemap: https://fly-bazaar-ahmadraza.netlify.app/sitemap.xml
